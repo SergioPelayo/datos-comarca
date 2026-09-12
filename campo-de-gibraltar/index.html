@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo se mueve el Campo de Gibraltar</title>
+<meta name="description" content="Las cifras públicas verificadas del transporte en el Campo de Gibraltar: 8.144 viajes de autobús al día, un tren directo a Madrid y quince años sin una sola conexión ejecutada. Cada dato con su fuente enlazada.">
+<meta name="author" content="Sergio Pelayo Jimeno">
+<link rel="canonical" href="https://datos.pelayoingenieriadigital.es/campo-de-gibraltar/">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Pelayo Ingeniería Digital">
+<meta property="og:title" content="Cómo se mueve el Campo de Gibraltar">
+<meta property="og:description" content="Las cifras públicas verificadas del transporte en el Campo de Gibraltar: 8.144 viajes de autobús al día, un tren directo a Madrid y quince años sin una sola conexión ejecutada. Cada dato con su fuente enlazada.">
+<meta property="og:url" content="https://datos.pelayoingenieriadigital.es/campo-de-gibraltar/">
+<meta property="og:image" content="https://datos.pelayoingenieriadigital.es/campo-de-gibraltar/card-comarca.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="Quince años de debate, en cuatro cifras: 8.144 viajes de autobús al día, un tren directo a Madrid, 466.000 € de estudio informativo y más de 500 millones en la vía.">
+<meta property="article:published_time" content="2026-09-12">
+<meta property="article:author" content="Sergio Pelayo Jimeno">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cómo se mueve el Campo de Gibraltar">
+<meta name="twitter:description" content="Las cifras públicas verificadas del transporte en el Campo de Gibraltar: 8.144 viajes de autobús al día, un tren directo a Madrid y quince años sin una sola conexión ejecutada. Cada dato con su fuente enlazada.">
+<meta name="twitter:image" content="https://datos.pelayoingenieriadigital.es/campo-de-gibraltar/card-comarca.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cómo se mueve el Campo de Gibraltar",
+  "description": "Las cifras públicas verificadas del transporte en el Campo de Gibraltar: 8.144 viajes de autobús al día, un tren directo a Madrid y quince años sin una sola conexión ejecutada. Cada dato con su fuente enlazada.",
+  "datePublished": "2026-09-12",
+  "inLanguage": "es-ES",
+  "image": "https://datos.pelayoingenieriadigital.es/campo-de-gibraltar/card-comarca.png",
+  "author": {
+    "@type": "Person",
+    "name": "Sergio Pelayo Jimeno",
+    "jobTitle": "Ingeniero informático",
+    "url": "https://pelayoingenieriadigital.es"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pelayo Ingeniería Digital",
+    "url": "https://pelayoingenieriadigital.es"
+  },
+  "about": ["Campo de Gibraltar", "movilidad", "datos abiertos", "transporte público"]
+}
+</script>
+
+<style>
+  :root{
+    --ground:#F1F4F6;
+    --surface:#FFFFFF;
+    --ink:#0F171E;
+    --muted:#5A6B78;
+    --line:#D7E0E6;
+    --line-soft:#E6ECF0;
+    --azul:#0069B4;
+    --azul-soft:rgba(0,105,180,.10);
+    --oro:#8F6412;
+    --oro-soft:rgba(143,100,18,.12);
+    --shadow:0 1px 2px rgba(15,23,30,.06);
+    --maxw:760px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#0A0D11;
+      --surface:#111820;
+      --ink:#EDF2F5;
+      --muted:#8698A5;
+      --line:#1F2A34;
+      --line-soft:#19222B;
+      --azul:#3FADFF;
+      --azul-soft:rgba(63,173,255,.12);
+      --oro:#E0AB3C;
+      --oro-soft:rgba(224,171,60,.13);
+      --shadow:0 1px 2px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0A0D11;
+    --surface:#111820;
+    --ink:#EDF2F5;
+    --muted:#8698A5;
+    --line:#1F2A34;
+    --line-soft:#19222B;
+    --azul:#3FADFF;
+    --azul-soft:rgba(63,173,255,.12);
+    --oro:#E0AB3C;
+    --oro-soft:rgba(224,171,60,.13);
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+    font-size:18px;line-height:1.62;
+    margin:0;padding-block:0 72px;padding-left:20px;padding-right:20px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto}
+
+  h1,h2,h3,.num,.eyebrow,.mono,.tag{font-family:Archivo,"Helvetica Neue",Arial,sans-serif}
+  .mono,.src,.pk,.tag,.eyebrow{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+
+  .eyebrow{
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--azul);font-weight:500;
+  }
+
+  /* ---------- hero ---------- */
+  header{padding-block:64px 44px;border-bottom:2px solid var(--ink)}
+  h1{
+    font-size:clamp(38px,7.4vw,62px);font-weight:800;line-height:1.02;
+    letter-spacing:-.025em;margin:16px 0 0;text-wrap:balance;
+  }
+  .standfirst{font-size:20px;color:var(--muted);margin:20px 0 0;max-width:60ch}
+  .stamp{
+    margin-top:28px;font-size:12.5px;color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  }
+  .stamp b{color:var(--ink);font-weight:500}
+
+  /* ---------- sections ---------- */
+  section{padding-block:52px;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:none}
+  h2{
+    font-size:clamp(25px,4vw,33px);font-weight:700;letter-spacing:-.02em;
+    line-height:1.14;margin:10px 0 0;text-wrap:balance;
+  }
+  section > p{margin:18px 0 0;max-width:65ch}
+  .lead{font-size:19px}
+
+  /* ---------- figure rows ---------- */
+  .figs{display:grid;gap:0;margin-top:32px}
+  .fig{
+    display:grid;grid-template-columns:minmax(140px,auto) 1fr;
+    gap:10px 28px;align-items:baseline;
+    padding-block:20px;border-top:1px solid var(--line-soft);
+  }
+  .fig:last-child{border-bottom:1px solid var(--line-soft)}
+  .num{
+    font-size:clamp(34px,6vw,46px);font-weight:800;letter-spacing:-.035em;
+    line-height:1;color:var(--azul);font-variant-numeric:tabular-nums;
+  }
+  .num.gold{color:var(--oro)}
+  .num u{text-decoration:none;font-size:.46em;font-weight:600;letter-spacing:0;margin-left:.22em;color:var(--muted)}
+  .fig p{margin:0;font-size:17px;line-height:1.5}
+  .fig .who{display:block;color:var(--muted);font-size:15px;margin-top:4px}
+
+  /* ---------- guess widget ---------- */
+  .guess{
+    margin-top:34px;background:var(--surface);border:1px solid var(--line);
+    box-shadow:var(--shadow);padding:26px 26px 28px;
+  }
+  .guess .q{font-size:19px;margin:0;font-weight:600;font-family:Archivo,sans-serif;letter-spacing:-.01em}
+  .guess .hint{margin:8px 0 0;font-size:15px;color:var(--muted)}
+  .slrow{display:flex;align-items:center;gap:18px;margin-top:22px;flex-wrap:wrap}
+  input[type=range]{flex:1 1 220px;min-width:180px;accent-color:var(--azul);height:26px}
+  .readout{
+    font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:500;
+    font-variant-numeric:tabular-nums;min-width:5.5ch;text-align:right;color:var(--ink);
+  }
+  .guess button{
+    margin-top:20px;font-family:Archivo,sans-serif;font-size:15px;font-weight:700;
+    letter-spacing:.02em;background:var(--ink);color:var(--ground);
+    border:none;padding:11px 20px;cursor:pointer;
+  }
+  .guess button:hover{background:var(--azul);color:#fff}
+  .guess button:focus-visible{outline:3px solid var(--oro);outline-offset:2px}
+  .reveal{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+  .reveal .big{
+    font-family:Archivo,sans-serif;font-size:40px;font-weight:800;
+    letter-spacing:-.035em;color:var(--oro);line-height:1;font-variant-numeric:tabular-nums;
+  }
+  .reveal p{margin:12px 0 0;font-size:17px;max-width:56ch}
+
+  /* ---------- timeline ---------- */
+  .tl{margin-top:34px;border-left:2px solid var(--line);padding-left:0}
+  .ev{position:relative;padding:0 0 26px 30px}
+  .ev:last-child{padding-bottom:0}
+  .ev::before{
+    content:"";position:absolute;left:-6px;top:7px;width:10px;height:10px;
+    background:var(--ground);border:2px solid var(--muted);border-radius:50%;
+  }
+  .ev.mark::before{background:var(--oro);border-color:var(--oro)}
+  .pk{font-size:13px;letter-spacing:.08em;color:var(--muted);display:block}
+  .ev.mark .pk{color:var(--oro)}
+  .ev p{margin:3px 0 0;font-size:17px;line-height:1.5}
+
+  /* ---------- comparison bars ---------- */
+  .bars{margin-top:32px;display:grid;gap:22px}
+  .bar .top{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:16px}
+  .bar .top strong{font-family:Archivo,sans-serif;font-weight:700;font-size:17px}
+  .bar .top span{font-family:"IBM Plex Mono",monospace;font-size:15px;color:var(--muted);white-space:nowrap}
+  .track{margin-top:8px;height:26px;background:var(--line-soft);position:relative;overflow:hidden}
+  .fill{height:100%;background:var(--azul)}
+  .fill.slow{background:var(--oro)}
+  .bar .foot{margin-top:7px;font-size:14.5px;color:var(--muted)}
+
+  /* ---------- money ---------- */
+  .money{margin-top:32px;display:grid;gap:0}
+  .mrow{
+    display:flex;justify-content:space-between;gap:20px;align-items:baseline;
+    padding-block:16px;border-top:1px solid var(--line-soft);
+  }
+  .mrow:last-child{border-bottom:1px solid var(--line-soft)}
+  .mrow .what{font-size:16.5px;max-width:44ch}
+  .mrow .amt{
+    font-family:Archivo,sans-serif;font-weight:800;font-size:24px;letter-spacing:-.03em;
+    color:var(--oro);white-space:nowrap;font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- gap / callout ---------- */
+  .callout{
+    margin-top:32px;background:var(--azul-soft);border-left:4px solid var(--azul);
+    padding:24px 26px;
+  }
+  .callout p{margin:0;font-size:17.5px}
+  .callout p + p{margin-top:14px}
+  .callout code{
+    font-family:"IBM Plex Mono",monospace;font-size:15px;
+    background:var(--surface);padding:2px 6px;border:1px solid var(--line);
+  }
+
+  /* ---------- caja de herramientas ---------- */
+  .kit{
+    margin-top:52px;background:var(--surface);border-top:3px solid var(--oro);
+    border-bottom:1px solid var(--line);padding:38px 32px 40px;
+  }
+  .kit .eyebrow.op{color:var(--oro)}
+  .kit h2{margin-top:12px}
+  .kits{margin-top:32px;display:grid;gap:0}
+  .k{
+    display:grid;grid-template-columns:minmax(170px,210px) 1fr;gap:12px 28px;
+    padding-block:22px;border-top:1px solid var(--line-soft);align-items:start;
+  }
+  .k:last-child{border-bottom:1px solid var(--line-soft)}
+  .kn{
+    font-family:Archivo,sans-serif;font-weight:700;font-size:17px;line-height:1.25;
+    letter-spacing:-.01em;
+  }
+  .kn span{
+    display:block;font-family:"IBM Plex Mono",monospace;font-weight:400;
+    font-size:12.5px;letter-spacing:.03em;color:var(--muted);margin-top:6px;
+  }
+  .k.hot .kn a{color:var(--oro)}
+  .kn a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);
+        padding-bottom:1px}
+  .kn a:hover{border-bottom-color:currentColor}
+  .kn a:focus-visible{outline:2px solid var(--azul);outline-offset:3px}
+  .kd p{margin:0;font-size:16.5px;line-height:1.5}
+  .kd p.q{
+    margin-top:10px;padding-left:16px;border-left:3px solid var(--line);
+    font-style:italic;color:var(--muted);font-size:16px;
+  }
+  .k.hot .kd p.q{border-left-color:var(--oro);color:var(--ink)}
+  .kd p.q em{font-style:normal;color:var(--muted)}
+  .cierrekit{
+    margin-top:32px!important;padding:20px 24px;background:var(--oro-soft);
+    border-left:4px solid var(--oro);font-size:17.5px;
+  }
+
+  /* ---------- sources ---------- */
+  .src{font-size:13px;color:var(--muted);margin-top:26px;line-height:1.75}
+  .src a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+  .src a:hover{color:var(--azul)}
+  ol.fuentes{font-family:"IBM Plex Mono",monospace;font-size:13.5px;line-height:1.85;
+    color:var(--muted);padding-left:22px;margin:24px 0 0}
+  ol.fuentes a{color:var(--azul);text-decoration:none}
+  ol.fuentes a:hover{text-decoration:underline}
+
+  footer{padding-top:46px;border-top:2px solid var(--ink);margin-top:8px}
+  .sig{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .sig .me{font-family:Archivo,sans-serif;font-weight:700;font-size:19px}
+  .sig .me span{display:block;font-weight:400;font-size:15px;color:var(--muted);font-family:"Source Serif 4",serif}
+  .sig a{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--azul);text-decoration:none}
+  .sig a:hover{text-decoration:underline}
+
+  @media (max-width:520px){
+    .fig{grid-template-columns:1fr;gap:6px}
+    .mrow{flex-direction:column;gap:6px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Campo de Gibraltar · Datos públicos verificados</div>
+  <h1>Cómo se mueve el Campo de Gibraltar</h1>
+  <p class="standfirst">Quince años discutiendo el transporte de la comarca. Todas las cifras de esta página son públicas, gratuitas y llevaban ahí desde el principio. Las he recogido en una tarde. Lo que se discute en el Parlamento se puede responder con datos que ya están descargados a un clic — y casi nadie los abre.</p>
+  <div class="stamp">
+    <span>Actualizado el <b>12 de septiembre de 2026</b></span>
+    <span>·</span>
+    <span>Recopila <b>Sergio Pelayo</b>, ingeniero informático</span>
+  </div>
+</header>
+
+<section>
+  <div class="eyebrow">Punto de partida</div>
+  <h2>Una comarca de casi 280.000 personas</h2>
+  <p class="lead">Ocho municipios alrededor de una bahía, con el puerto de mayor tráfico de mercancías de España en el centro. Estas son las tres cifras con las que empieza cualquier conversación sobre movilidad aquí.</p>
+
+  <div class="figs">
+    <div class="fig">
+      <div class="num">276.335</div>
+      <p>habitantes en los ocho municipios de la comarca.<span class="who">Algeciras 123.639 · La Línea 63.773 · San Roque 33.646 · Los Barrios 24.219 · Tarifa 18.621 · Jimena 6.675 · Castellar 3.020 · San Martín del Tesorillo 2.742. Cifras de 2023.</span></p>
+    </div>
+    <div class="fig">
+      <div class="num">1.474.122</div>
+      <p>viajes en el transporte público metropolitano durante el primer semestre de 2025.<span class="who">851.703 en autobús interurbano y 622.419 en los urbanos de cuatro municipios. Un 14,4 % más que el año anterior.</span></p>
+    </div>
+    <div class="fig">
+      <div class="num gold">94.637</div>
+      <p>tarjetas de transporte activas, un 22 % más que doce meses antes.<span class="who">Equivale a algo más de un tercio de la población de la comarca.</span></p>
+    </div>
+  </div>
+
+  <div class="guess">
+    <p class="q">Antes de seguir: ¿cuántos viajes en autobús cree que se hacen al día en toda la comarca?</p>
+    <p class="hint">Cuente los urbanos y los interurbanos juntos, para las 276.335 personas que viven aquí.</p>
+    <div class="slrow">
+      <input id="sl" type="range" min="1000" max="60000" step="500" value="25000" aria-label="Viajes al día estimados">
+      <output class="readout" id="ro" for="sl">25.000</output>
+    </div>
+    <button id="btn" type="button">Ver la cifra real</button>
+    <div class="reveal" id="rev" hidden>
+      <div class="big" id="realnum">8.144 viajes al día</div>
+      <p id="verdict"></p>
+      <p>Son los 1.474.122 viajes del semestre repartidos entre sus 181 días. Sale <strong>un viaje de autobús al día por cada 34 habitantes</strong> de la comarca. Y es la cifra más alta jamás registrada aquí.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">2009 → 2026</div>
+  <h2>Quince años de estudios y ninguna conexión</h2>
+  <p>El debate sobre cómo unir Algeciras, Los Barrios, San Roque y La Línea no es nuevo. Esta es la secuencia, que importa porque cada paso reinicia el anterior.</p>
+
+  <div class="tl">
+    <div class="ev">
+      <span class="pk">2009</span>
+      <p>Se plantean por primera vez las alternativas: tranvía, metro ligero, cercanías y autobús de tránsito rápido.</p>
+    </div>
+    <div class="ev">
+      <span class="pk">2023</span>
+      <p>El Plan de Transporte Metropolitano prioriza el autobús como solución principal para la comarca.</p>
+    </div>
+    <div class="ev">
+      <span class="pk">ABRIL 2026</span>
+      <p>La Junta adjudica por <strong>466.000 €</strong> la redacción del estudio informativo.</p>
+    </div>
+    <div class="ev mark">
+      <span class="pk">10 SEPTIEMBRE 2026</span>
+      <p>El asunto llega a la Comisión de Fomento del Parlamento andaluz. Quince años después, no se ha ejecutado ninguna conexión.</p>
+    </div>
+  </div>
+
+  <p class="src">Lo que se discute hoy es si el modo debe ser tranvía o autobús de tránsito rápido. Esta página no entra en esa elección: se limita a poner las cifras que deberían sostenerla.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Salir de la comarca</div>
+  <h2>Algeciras está a un tren al día de Madrid</h2>
+  <p class="lead">Dos ciudades de la costa andaluza, dos maneras muy distintas de llegar a la capital.</p>
+
+  <div class="bars">
+    <div class="bar">
+      <div class="top"><strong>Málaga → Madrid</strong><span>2 h 30 min</span></div>
+      <div class="track"><div class="fill" style="width:42.9%"></div></div>
+      <div class="foot">512,5 km por línea de alta velocidad. Varios trenes al día.</div>
+    </div>
+    <div class="bar">
+      <div class="top"><strong>Algeciras → Madrid</strong><span>5 h 50 min</span></div>
+      <div class="track"><div class="fill slow" style="width:100%"></div></div>
+      <div class="foot">El servicio más rápido que existe. <strong>Un solo tren directo al día.</strong></div>
+    </div>
+  </div>
+
+  <p>No pongo aquí los kilómetros de vía de Algeciras a Madrid: las cifras que circulan son distancia en línea recta, no recorrido ferroviario real, y no he podido verificar el recorrido. La comparación honesta es la de tiempos y frecuencias, y ya dice bastante sola.</p>
+
+  <p>En paralelo, desde mayo de 2026 hay en el Congreso una petición para conectar por tren Algeciras con Cádiz y Jerez, el llamado tren de las dos bahías.</p>
+</section>
+
+<section>
+  <div class="eyebrow">El dinero que sí está llegando</div>
+  <h2>Más de 500 millones en la vía, y no para viajeros</h2>
+  <p class="lead">La línea Bobadilla–Algeciras, 176 kilómetros, es el acceso ferroviario al puerto con más tráfico de mercancías de España. Está recibiendo dinero, mucho, con un destino concreto: la autopista ferroviaria Algeciras–Zaragoza, para llevar semirremolques en tren.</p>
+
+  <div class="money">
+    <div class="mrow">
+      <div class="what">Programa de modernización del corredor Bobadilla–Algeciras</div>
+      <div class="amt">+514 M€</div>
+    </div>
+    <div class="mrow">
+      <div class="what">Obras adjudicadas para adaptar el gálibo de 21 túneles y estabilizar taludes, para que quepan los semirremolques</div>
+      <div class="amt">66,6 M€</div>
+    </div>
+    <div class="mrow">
+      <div class="what">Licitación de mayo de 2026 en el tramo Bobadilla–Ronda: renovación de vía y adaptación de estructuras <em>para una futura electrificación</em></div>
+      <div class="amt">21,6 M€</div>
+    </div>
+  </div>
+
+  <p>Ahí está el dato que a mí me parece más revelador de toda esta página. En 2026, el acceso ferroviario al primer puerto de mercancías de España sigue <strong>sin electrificar</strong>, y lo que se está licitando son obras para que algún día pueda estarlo. Financiado con fondos europeos NextGenerationEU.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Lo que falta</div>
+  <h2>Nadie ha puesto encima de la mesa cuánta gente se mueve</h2>
+  <p class="lead">En la Comisión de Fomento se pidieron criterios objetivos para elegir entre tranvía y autobús. El criterio más básico es cuántos viajes se hacen de verdad cada día entre Algeciras, Los Barrios, San Roque y La Línea. No he encontrado ese número en ninguna parte del debate público.</p>
+
+  <div class="callout">
+    <p>Y existe. El Ministerio de Transportes publica matrices origen–destino diarias, por municipio y por distrito censal, construidas con posicionamiento de móviles anonimizado, con serie continua desde enero de 2022 y licencia de datos abiertos.</p>
+    <p>Está en <code>movilidad-opendata.mitma.es</code>, se descarga sin permiso ni trámite, y responde exactamente a la pregunta que se está discutiendo en el Parlamento.</p>
+  </div>
+
+  <p>Me dedico a construir sistemas para que las decisiones dejen de tomarse a ojo. Voy a bajar esa matriz para los ocho municipios de la comarca y publicar aquí el resultado. A partir de ahí, que cada cual la mire con calma y saque sus propias conclusiones. Para eso se ponen los datos a la vista.</p>
+</section>
+
+<section class="kit">
+  <div class="eyebrow op">La caja de herramientas</div>
+  <h2>Todo lo de arriba sale de aquí. Y esto es una parte</h2>
+  <p class="lead">No he hecho ninguna gestión, no he pedido ningún permiso y no he llamado a nadie. Son portales públicos de descarga libre — cada nombre de abajo es un enlace, compruébelo. Estos son los que manejo a diario, con lo que hay dentro y una pregunta real que cada uno responde. Cuatro de ellos apuntan directamente a lo que se está discutiendo esta semana.</p>
+
+  <div class="kits">
+    <div class="k hot">
+      <div class="kn"><a href="https://www.transportes.gob.es/ministerio/proyectos-singulares/estudios-de-movilidad-con-big-data/opendata-movilidad" target="_blank" rel="noopener">Movilidad con big data</a><span>Ministerio de Transportes</span></div>
+      <div class="kd">
+        <p>Matrices origen–destino <strong>diarias</strong>, por municipio y por distrito censal, a partir de posicionamiento de móviles anonimizado. Serie continua desde enero de 2022.</p>
+        <p class="q">¿Cuántos viajes se hacen cada día entre Algeciras, Los Barrios, San Roque y La Línea?</p>
+      </div>
+    </div>
+
+    <div class="k hot">
+      <div class="kn"><a href="https://www.hacienda.gob.es/es-ES/GobiernoAbierto/Datos%20Abiertos/Paginas/licitaciones_plataforma_contratacion.aspx" target="_blank" rel="noopener">Contratación pública</a><span>Plataforma del Sector Público</span></div>
+      <div class="kd">
+        <p>Todas las licitaciones y adjudicaciones del Estado, comunidades y ayuntamientos, en ficheros descargables mes a mes. Importes, plazos, adjudicatarios.</p>
+        <p class="q">¿Cuánto se ha licitado de verdad para el tranvía en quince años, en qué fechas y a quién?</p>
+      </div>
+    </div>
+
+    <div class="k hot">
+      <div class="kn"><a href="https://www.catastro.hacienda.gob.es/webinspire/index.html" target="_blank" rel="noopener">Catastro</a><span>Servicios INSPIRE</span></div>
+      <div class="kd">
+        <p>Parcelas y edificios de toda España en formato cartográfico, con su geometría, su uso y su antigüedad. Descarga por municipio.</p>
+        <p class="q">¿Cuántas viviendas quedarían a menos de 500 metros de cada parada propuesta?</p>
+      </div>
+    </div>
+
+    <div class="k hot">
+      <div class="kn"><a href="https://datos.gob.es/es/catalogo/ea0042823-atlas-de-distribucion-de-renta-de-los-hogares-adrh" target="_blank" rel="noopener">Atlas de renta de los hogares</a><span>INE</span></div>
+      <div class="kd">
+        <p>Renta media por hogar y por persona <strong>a nivel de sección censal</strong> — el barrio, no el municipio. Con distribución por edades y desigualdad.</p>
+        <p class="q">¿Por qué barrios pasaría el trazado y qué renta tienen los que más dependen del autobús?</p>
+      </div>
+    </div>
+
+    <div class="k">
+      <div class="kn"><a href="https://datos.gob.es/es/catalogo/e05068001-precio-de-carburantes-en-las-gasolineras-espanolas" target="_blank" rel="noopener">Precios de carburantes</a><span>Ministerio para la Transición Ecológica</span></div>
+      <div class="kd">
+        <p>Precio declarado de las más de 11.000 estaciones de servicio del país, con refresco cada media hora. Declararlo es obligatorio.</p>
+        <p class="q">¿Cuánto cambia el precio dentro del mismo día, y cuánto se ahorra eligiendo bien? <em>Sobre esta llevo meses guardando mi propia serie histórica.</em></p>
+      </div>
+    </div>
+
+    <div class="k">
+      <div class="kn"><a href="https://opendata.aemet.es/" target="_blank" rel="noopener">AEMET OpenData</a><span>Agencia Estatal de Meteorología</span></div>
+      <div class="kd">
+        <p>Observación, predicción y series climatológicas históricas por estación, vía API abierta.</p>
+        <p class="q">¿Cuántos días al año llueve de verdad en la obra que estoy planificando?</p>
+      </div>
+    </div>
+
+    <div class="k">
+      <div class="kn"><a href="https://www.esios.ree.es/es/pagina/api" target="_blank" rel="noopener">e·sios</a><span>Red Eléctrica</span></div>
+      <div class="kd">
+        <p>Demanda, generación por tecnología y precios del sistema eléctrico español, con detalle horario y API pública.</p>
+        <p class="q">¿Qué cuesta en energía electrificar una línea, o mover una producción a otra franja horaria?</p>
+      </div>
+    </div>
+
+    <div class="k">
+      <div class="kn"><a href="https://datos.gob.es/" target="_blank" rel="noopener">datos.gob.es</a><span>Catálogo del Gobierno de España</span></div>
+      <div class="kd">
+        <p>El índice central: decenas de miles de conjuntos de datos de todas las administraciones, con su licencia y su formato.</p>
+        <p class="q">Si la pregunta es pública, el dato suele estar. Lo difícil no es encontrarlo: es saber qué preguntarle.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="cierrekit">Con cuatro de estas fuentes se puede responder a casi todo lo que se está debatiendo esta semana sobre el transporte de la comarca: cuánta gente se mueve, cuánto se ha licitado, a quién llegaría y cuánto costaría. Están abiertas desde hace años.</p>
+
+  <p>Esto es lo que hago: coger datos que ya existen y convertirlos en algo con lo que se pueda decidir. Si esto es lo que hay disponible y sin usar para una decisión pública de cientos de millones, merece la pena preguntarse qué hay disponible y sin usar para la suya.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Comprobarlo usted mismo</div>
+  <h2>Fuentes</h2>
+  <p>Todas las cifras de esta página salen de documentos públicos. Los enlaces van a la fuente original, no a un resumen.</p>
+  <ol class="fuentes">
+    <li>Población por municipios, 2023 — <a href="https://en.wikipedia.org/wiki/Campo_de_Gibraltar">Campo de Gibraltar</a></li>
+    <li>Viajeros del transporte público metropolitano, primer semestre de 2025 — <a href="https://www.diarioarea.com/campo-de-gibraltar/el-transporte-publico-del-campo-de-gibraltar-bate-record-15-millones-de-viajeros-en-seis-meses/">Diario Área</a></li>
+    <li>Cronología del tranvía y llegada al Parlamento, 10/09/2026 — <a href="https://www.diarioarea.com/campo-de-gibraltar/el-tranvia-del-campo-de-gibraltar-llega-al-parlamento-tras-15-anos-de-estudios-y-retrasos/">Diario Área</a></li>
+    <li>Tiempos y frecuencias Algeciras–Madrid — <a href="https://www.thetrainline.com/en-us/train-times/algeciras-to-madrid">Trainline</a></li>
+    <li>Madrid–Málaga: 512,5 km y 2 h 30 — <a href="https://es.wikipedia.org/wiki/L%C3%ADnea_de_alta_velocidad_C%C3%B3rdoba-M%C3%A1laga">Línea de alta velocidad Córdoba–Málaga</a></li>
+    <li>Obras de 66,6 M€ para la autopista ferroviaria — <a href="https://planderecuperacion.gob.es/noticias/transportes-obras-linea-bobadilla-algeciras-autopista-ferroviaria-prtr">Plan de Recuperación</a></li>
+    <li>Licitación de 21,6 M€ en Bobadilla–Ronda, mayo de 2026 — <a href="https://www.elestrechodigital.com/2026/05/27/adif-licita-obras-de-mejora-en-el-tramo-bobadilla-ronda-por-216-millones-de-euros">El Estrecho Digital</a></li>
+    <li>Tren de las dos bahías en el Congreso, mayo de 2026 — <a href="https://www.theolivepress.es/spain-news/2026/05/12/two-bays-train-line-algeciras-cadiz-jerez/">The Olive Press</a></li>
+    <li>Matrices de movilidad con big data — <a href="https://www.transportes.gob.es/ministerio/proyectos-singulares/estudios-de-movilidad-con-big-data/opendata-movilidad">Ministerio de Transportes</a></li>
+  </ol>
+  <p class="src">Si encuentra un error en cualquiera de estas cifras, dígamelo y lo corrijo aquí mismo con la corrección a la vista. Una página de datos que no se puede corregir no sirve de nada.</p>
+</section>
+
+<footer>
+  <div class="sig">
+    <div class="me">Sergio Pelayo<span>Ingeniero informático · Campo de Gibraltar</span></div>
+    <a href="https://pelayoingenieriadigital.es">pelayoingenieriadigital.es</a>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var sl=document.getElementById('sl'),ro=document.getElementById('ro'),
+      btn=document.getElementById('btn'),rev=document.getElementById('rev'),
+      vd=document.getElementById('verdict'),REAL=8144;
+  function fmt(n){return n.toLocaleString('es-ES');}
+  function paint(){ro.textContent=fmt(+sl.value);}
+  sl.addEventListener('input',paint); paint();
+  btn.addEventListener('click',function(){
+    var g=+sl.value, ratio=g/REAL, txt;
+    if(ratio>=0.8&&ratio<=1.25){txt='Ha acertado de cerca. Poca gente lo hace: casi todo el mundo se pasa.';}
+    else if(g>REAL){
+      var veces=(ratio).toFixed(ratio<10?1:0).replace('.',',');
+      txt='Usted ha dicho '+fmt(g)+'. Es '+veces+' veces la cifra real. Casi todo el mundo se pasa, y ese hueco entre lo que creemos y lo que hay es justo el problema.';
+    } else {
+      txt='Usted ha dicho '+fmt(g)+', por debajo de lo real. Va contracorriente: la mayoría se pasa bastante.';
+    }
+    vd.textContent=txt;
+    rev.hidden=false;
+    btn.textContent='Cifra revelada';
+    btn.disabled=true;
+    btn.style.opacity=.5;
+    btn.style.cursor='default';
+  });
+})();
+</script>
+</body>
+</html>
