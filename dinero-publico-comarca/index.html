@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El dinero público de la comarca</title>
+<meta name="description" content="En 2025 se convocaron 523,7 millones de euros en contratos públicos en el Campo de Gibraltar, repartidos en 751 expedientes. El 10 % de los contratos se lleva el 80 % del dinero, y 280 estaban al alcance de una pyme.">
+<meta name="author" content="Sergio Pelayo Jimeno">
+<link rel="canonical" href="https://datos.pelayoingenieriadigital.es/dinero-publico-comarca/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Pelayo Ingeniería Digital">
+<meta property="og:title" content="El dinero público de la comarca">
+<meta property="og:description" content="En 2025 se convocaron 523,7 millones de euros en contratos públicos en el Campo de Gibraltar, repartidos en 751 expedientes. El 10 % de los contratos se lleva el 80 % del dinero, y 280 estaban al alcance de una pyme.">
+<meta property="og:url" content="https://datos.pelayoingenieriadigital.es/dinero-publico-comarca/">
+<meta property="og:image" content="https://datos.pelayoingenieriadigital.es/dinero-publico-comarca/card-contratos.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="523,7 millones convocados en 2025 en el Campo de Gibraltar; el 10 % de los contratos concentra el 80 % del dinero.">
+<meta property="article:published_time" content="2026-09-13">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El dinero público de la comarca">
+<meta name="twitter:description" content="En 2025 se convocaron 523,7 millones de euros en contratos públicos en el Campo de Gibraltar, repartidos en 751 expedientes. El 10 % de los contratos se lleva el 80 % del dinero, y 280 estaban al alcance de una pyme.">
+<meta name="twitter:image" content="https://datos.pelayoingenieriadigital.es/dinero-publico-comarca/card-contratos.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9C%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"El dinero público de la comarca","description":"En 2025 se convocaron 523,7 millones de euros en contratos públicos en el Campo de Gibraltar, repartidos en 751 expedientes. El 10 % de los contratos se lleva el 80 % del dinero, y 280 estaban al alcance de una pyme.",
+"datePublished":"2026-09-13","inLanguage":"es-ES","image":"https://datos.pelayoingenieriadigital.es/dinero-publico-comarca/card-contratos.png",
+"author":{"@type":"Person","name":"Sergio Pelayo Jimeno","jobTitle":"Ingeniero informático","url":"https://pelayoingenieriadigital.es"},
+"publisher":{"@type":"Organization","name":"Pelayo Ingeniería Digital","url":"https://pelayoingenieriadigital.es"},
+"about":["contratación pública","Campo de Gibraltar","datos abiertos","pymes"]}
+</script>
+<style>
+  :root{
+    --ground:#F1F4F6;
+    --surface:#FFFFFF;
+    --ink:#0F171E;
+    --muted:#5A6B78;
+    --line:#D7E0E6;
+    --line-soft:#E6ECF0;
+    --azul:#0069B4;
+    --azul-soft:rgba(0,105,180,.10);
+    --oro:#8F6412;
+    --oro-soft:rgba(143,100,18,.12);
+    --shadow:0 1px 2px rgba(15,23,30,.06);
+    --maxw:760px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#0A0D11;
+      --surface:#111820;
+      --ink:#EDF2F5;
+      --muted:#8698A5;
+      --line:#1F2A34;
+      --line-soft:#19222B;
+      --azul:#3FADFF;
+      --azul-soft:rgba(63,173,255,.12);
+      --oro:#E0AB3C;
+      --oro-soft:rgba(224,171,60,.13);
+      --shadow:0 1px 2px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0A0D11;
+    --surface:#111820;
+    --ink:#EDF2F5;
+    --muted:#8698A5;
+    --line:#1F2A34;
+    --line-soft:#19222B;
+    --azul:#3FADFF;
+    --azul-soft:rgba(63,173,255,.12);
+    --oro:#E0AB3C;
+    --oro-soft:rgba(224,171,60,.13);
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+    font-size:18px;line-height:1.62;
+    margin:0;padding-block:0 72px;padding-left:20px;padding-right:20px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto}
+
+  h1,h2,h3,.num,.eyebrow,.mono,.tag{font-family:Archivo,"Helvetica Neue",Arial,sans-serif}
+  .mono,.src,.pk,.tag,.eyebrow{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+
+  .eyebrow{
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--azul);font-weight:500;
+  }
+
+  /* ---------- hero ---------- */
+  header{padding-block:64px 44px;border-bottom:2px solid var(--ink)}
+  h1{
+    font-size:clamp(38px,7.4vw,62px);font-weight:800;line-height:1.02;
+    letter-spacing:-.025em;margin:16px 0 0;text-wrap:balance;
+  }
+  .standfirst{font-size:20px;color:var(--muted);margin:20px 0 0;max-width:60ch}
+  .stamp{
+    margin-top:28px;font-size:12.5px;color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  }
+  .stamp b{color:var(--ink);font-weight:500}
+
+  /* ---------- sections ---------- */
+  section{padding-block:52px;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:none}
+  h2{
+    font-size:clamp(25px,4vw,33px);font-weight:700;letter-spacing:-.02em;
+    line-height:1.14;margin:10px 0 0;text-wrap:balance;
+  }
+  section > p{margin:18px 0 0;max-width:65ch}
+  .lead{font-size:19px}
+
+  /* ---------- figure rows ---------- */
+  .figs{display:grid;gap:0;margin-top:32px}
+  .fig{
+    display:grid;grid-template-columns:minmax(140px,auto) 1fr;
+    gap:10px 28px;align-items:baseline;
+    padding-block:20px;border-top:1px solid var(--line-soft);
+  }
+  .fig:last-child{border-bottom:1px solid var(--line-soft)}
+  .num{
+    font-size:clamp(34px,6vw,46px);font-weight:800;letter-spacing:-.035em;
+    line-height:1;color:var(--azul);font-variant-numeric:tabular-nums;
+  }
+  .num.gold{color:var(--oro)}
+  .num u{text-decoration:none;font-size:.46em;font-weight:600;letter-spacing:0;margin-left:.22em;color:var(--muted)}
+  .fig p{margin:0;font-size:17px;line-height:1.5}
+  .fig .who{display:block;color:var(--muted);font-size:15px;margin-top:4px}
+
+  /* ---------- guess widget ---------- */
+  .guess{
+    margin-top:34px;background:var(--surface);border:1px solid var(--line);
+    box-shadow:var(--shadow);padding:26px 26px 28px;
+  }
+  .guess .q{font-size:19px;margin:0;font-weight:600;font-family:Archivo,sans-serif;letter-spacing:-.01em}
+  .guess .hint{margin:8px 0 0;font-size:15px;color:var(--muted)}
+  .slrow{display:flex;align-items:center;gap:18px;margin-top:22px;flex-wrap:wrap}
+  input[type=range]{flex:1 1 220px;min-width:180px;accent-color:var(--azul);height:26px}
+  .readout{
+    font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:500;
+    font-variant-numeric:tabular-nums;min-width:5.5ch;text-align:right;color:var(--ink);
+  }
+  .guess button{
+    margin-top:20px;font-family:Archivo,sans-serif;font-size:15px;font-weight:700;
+    letter-spacing:.02em;background:var(--ink);color:var(--ground);
+    border:none;padding:11px 20px;cursor:pointer;
+  }
+  .guess button:hover{background:var(--azul);color:#fff}
+  .guess button:focus-visible{outline:3px solid var(--oro);outline-offset:2px}
+  .reveal{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+  .reveal .big{
+    font-family:Archivo,sans-serif;font-size:40px;font-weight:800;
+    letter-spacing:-.035em;color:var(--oro);line-height:1;font-variant-numeric:tabular-nums;
+  }
+  .reveal p{margin:12px 0 0;font-size:17px;max-width:56ch}
+
+  /* ---------- timeline ---------- */
+  .tl{margin-top:34px;border-left:2px solid var(--line);padding-left:0}
+  .ev{position:relative;padding:0 0 26px 30px}
+  .ev:last-child{padding-bottom:0}
+  .ev::before{
+    content:"";position:absolute;left:-6px;top:7px;width:10px;height:10px;
+    background:var(--ground);border:2px solid var(--muted);border-radius:50%;
+  }
+  .ev.mark::before{background:var(--oro);border-color:var(--oro)}
+  .pk{font-size:13px;letter-spacing:.08em;color:var(--muted);display:block}
+  .ev.mark .pk{color:var(--oro)}
+  .ev p{margin:3px 0 0;font-size:17px;line-height:1.5}
+
+  /* ---------- comparison bars ---------- */
+  .bars{margin-top:32px;display:grid;gap:22px}
+  .bar .top{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:16px}
+  .bar .top strong{font-family:Archivo,sans-serif;font-weight:700;font-size:17px}
+  .bar .top span{font-family:"IBM Plex Mono",monospace;font-size:15px;color:var(--muted);white-space:nowrap}
+  .track{margin-top:8px;height:26px;background:var(--line-soft);position:relative;overflow:hidden}
+  .fill{height:100%;background:var(--azul)}
+  .fill.slow{background:var(--oro)}
+  .bar .foot{margin-top:7px;font-size:14.5px;color:var(--muted)}
+
+  /* ---------- pares población / inversión ---------- */
+  .pares{margin-top:32px;display:grid;gap:26px}
+  .par{padding-block:4px}
+  .pn{font-family:Archivo,sans-serif;font-weight:700;font-size:18px;letter-spacing:-.01em;margin-bottom:10px}
+  .pb{display:grid;grid-template-columns:82px 1fr 58px;align-items:center;gap:12px;margin-bottom:6px}
+  .pl{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;
+      text-transform:uppercase;color:var(--muted)}
+  .pv{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--ink);text-align:right;
+      font-variant-numeric:tabular-nums}
+  .pb .track{margin-top:0;height:18px}
+  .fill.pop{background:var(--muted);opacity:.45}
+  .pf{margin-top:9px;font-size:15px;color:var(--muted)}
+  @media (max-width:520px){.pb{grid-template-columns:70px 1fr 52px;gap:8px}}
+
+  /* ---------- serie mensual ---------- */
+  .meses{margin-top:30px;display:grid;gap:9px}
+  .mes{display:grid;grid-template-columns:96px 1fr 44px;align-items:center;gap:14px}
+  .ml{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);
+      letter-spacing:.03em;text-align:right}
+  .mv{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--ink);
+      font-variant-numeric:tabular-nums;text-align:right}
+  .mes .track{margin-top:0;height:17px}
+  .fill.low{background:var(--muted);opacity:.5}
+  .nota-fila{display:block;font-size:14px;color:var(--muted);margin-top:4px;line-height:1.4}
+  .mrow .what em{font-style:normal;color:var(--muted);font-size:15px}
+  @media (max-width:520px){.mes{grid-template-columns:80px 1fr 40px;gap:9px}}
+
+  /* ---------- money ---------- */
+  .money{margin-top:32px;display:grid;gap:0}
+  .mrow{
+    display:flex;justify-content:space-between;gap:20px;align-items:baseline;
+    padding-block:16px;border-top:1px solid var(--line-soft);
+  }
+  .mrow:last-child{border-bottom:1px solid var(--line-soft)}
+  .mrow .what{font-size:16.5px;max-width:44ch}
+  .mrow .amt{
+    font-family:Archivo,sans-serif;font-weight:800;font-size:24px;letter-spacing:-.03em;
+    color:var(--oro);white-space:nowrap;font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- gap / callout ---------- */
+  .callout{
+    margin-top:32px;background:var(--azul-soft);border-left:4px solid var(--azul);
+    padding:24px 26px;
+  }
+  .callout p{margin:0;font-size:17.5px}
+  .callout p + p{margin-top:14px}
+  .callout code{
+    font-family:"IBM Plex Mono",monospace;font-size:15px;
+    background:var(--surface);padding:2px 6px;border:1px solid var(--line);
+  }
+
+  /* ---------- caja de herramientas ---------- */
+  .kit{
+    margin-top:52px;background:var(--surface);border-top:3px solid var(--oro);
+    border-bottom:1px solid var(--line);padding:38px 32px 40px;
+  }
+  .kit .eyebrow.op{color:var(--oro)}
+  .kit h2{margin-top:12px}
+  .kits{margin-top:32px;display:grid;gap:0}
+  .k{
+    display:grid;grid-template-columns:minmax(170px,210px) 1fr;gap:12px 28px;
+    padding-block:22px;border-top:1px solid var(--line-soft);align-items:start;
+  }
+  .k:last-child{border-bottom:1px solid var(--line-soft)}
+  .kn{
+    font-family:Archivo,sans-serif;font-weight:700;font-size:17px;line-height:1.25;
+    letter-spacing:-.01em;
+  }
+  .kn span{
+    display:block;font-family:"IBM Plex Mono",monospace;font-weight:400;
+    font-size:12.5px;letter-spacing:.03em;color:var(--muted);margin-top:6px;
+  }
+  .k.hot .kn a{color:var(--oro)}
+  .kn a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);
+        padding-bottom:1px}
+  .kn a:hover{border-bottom-color:currentColor}
+  .kn a:focus-visible{outline:2px solid var(--azul);outline-offset:3px}
+  .kd p{margin:0;font-size:16.5px;line-height:1.5}
+  .kd p.q{
+    margin-top:10px;padding-left:16px;border-left:3px solid var(--line);
+    font-style:italic;color:var(--muted);font-size:16px;
+  }
+  .k.hot .kd p.q{border-left-color:var(--oro);color:var(--ink)}
+  .kd p.q em{font-style:normal;color:var(--muted)}
+  .cierrekit{
+    margin-top:32px!important;padding:20px 24px;background:var(--oro-soft);
+    border-left:4px solid var(--oro);font-size:17.5px;
+  }
+
+  /* ---------- sources ---------- */
+  .src{font-size:13px;color:var(--muted);margin-top:26px;line-height:1.75}
+  .src a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+  .src a:hover{color:var(--azul)}
+  ol.fuentes{font-family:"IBM Plex Mono",monospace;font-size:13.5px;line-height:1.85;
+    color:var(--muted);padding-left:22px;margin:24px 0 0}
+  ol.fuentes a{color:var(--azul);text-decoration:none}
+  ol.fuentes a:hover{text-decoration:underline}
+
+  footer{padding-top:46px;border-top:2px solid var(--ink);margin-top:8px}
+  .sig{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .sig .me{font-family:Archivo,sans-serif;font-weight:700;font-size:19px}
+  .sig .me span{display:block;font-weight:400;font-size:15px;color:var(--muted);font-family:"Source Serif 4",serif}
+  .sig a{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--azul);text-decoration:none}
+  .sig a:hover{text-decoration:underline}
+
+  @media (max-width:520px){
+    .fig{grid-template-columns:1fr;gap:6px}
+    .mrow{flex-direction:column;gap:6px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Contratación pública · Campo de Gibraltar · 2025</div>
+  <h1>El dinero público de la comarca</h1>
+  <p class="standfirst">El sábado escribí que con cuatro fuentes públicas se podía responder a casi todo lo que se estaba debatiendo aquí. Una era la de contratación. He ido a abrirla: 751 expedientes, 523,7 millones de euros, uno por uno.</p>
+  <div class="stamp">
+    <span>Publicado el <b>13 de septiembre de 2026</b></span>
+    <span>·</span>
+    <span>Datos de la <b>Plataforma de Contratación del Sector Público</b></span>
+  </div>
+</header>
+
+<section>
+  <div class="eyebrow">El tamaño del asunto</div>
+  <h2>523,7 millones convocados en un año</h2>
+  <p class="lead">Eso es lo que las administraciones de la comarca sacaron a contratación durante 2025, repartido en 751 expedientes. Así se reparte por municipios:</p>
+
+  <div class="money">
+    <div class="mrow"><div class="what">Algeciras <em>· 374 expedientes</em></div><div class="amt">301,0 M€</div></div>
+    <div class="mrow"><div class="what">La Línea de la Concepción <em>· 101 expedientes</em></div><div class="amt">107,4 M€</div></div>
+    <div class="mrow"><div class="what">San Roque <em>· 76 expedientes</em></div><div class="amt">63,3 M€</div></div>
+    <div class="mrow"><div class="what">Toda la comarca <em>· 54 expedientes</em><span class="nota-fila">Arcgisa y la Mancomunidad, que no son de ningún pueblo sino de todos</span></div><div class="amt">28,9 M€</div></div>
+    <div class="mrow"><div class="what">Los Barrios <em>· 40 expedientes</em></div><div class="amt">15,3 M€</div></div>
+    <div class="mrow"><div class="what">Tarifa <em>· 57 expedientes</em></div><div class="amt">4,6 M€</div></div>
+    <div class="mrow"><div class="what">San Martín del Tesorillo <em>· 16 expedientes</em></div><div class="amt">1,19 M€</div></div>
+    <div class="mrow"><div class="what">Castellar de la Frontera <em>· 15 expedientes</em></div><div class="amt">1,14 M€</div></div>
+    <div class="mrow"><div class="what">Jimena de la Frontera <em>· 18 expedientes</em></div><div class="amt">0,88 M€</div></div>
+  </div>
+
+  <p>Compare Tarifa con Los Barrios. Tarifa convoca <strong>más expedientes</strong> —57 frente a 40— y mueve <strong>tres veces menos dinero</strong>. No es que contrate poco: es que contrata pequeño. Cada ayuntamiento tiene una forma de comprar, y se le nota en cuanto se miran las dos columnas a la vez en lugar de una sola.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Lo que casi nadie mira</div>
+  <h2>Diez contratos de cada cien se llevan ocho euros de cada diez</h2>
+  <p class="lead">Es el hallazgo que más me ha llamado la atención, y no hace falta ser economista para verlo: basta con ordenar los 751 expedientes por importe.</p>
+
+  <div class="figs">
+    <div class="fig">
+      <div class="num gold">80,3<u>%</u></div>
+      <p><strong>del dinero está en 73 contratos.</strong><span class="who">Son el 10 % de los expedientes. Cada uno por encima del millón de euros.</span></p>
+    </div>
+    <div class="fig">
+      <div class="num">1,1<u>%</u></div>
+      <p><strong>del dinero está en 280 contratos.</strong><span class="who">Son el 37 % de los expedientes, todos de 50.000 € o menos.</span></p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>Un contrato típico de la comarca son <strong>89.100 €</strong>, que es la mediana. Pero el contrato medio son <strong>698.305 €</strong>.</p>
+    <p>Cuando la media te sale ocho veces la mediana, la media ha dejado de significar nada: te la están moviendo unos pocos expedientes enormes. Es el error más repetido que me encuentro cuando una empresa me enseña sus propios números.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">El calendario</div>
+  <h2>En diciembre se convoca siete veces más que en agosto</h2>
+  <p class="lead">Expedientes sacados a contratación cada mes de 2025. La escala es la misma en todas las barras.</p>
+
+  <div class="meses">
+    <div class="mes"><span class="ml">Enero</span><div class="track"><div class="fill" style="width:34.9%"></div></div><span class="mv">59</span></div>
+    <div class="mes"><span class="ml">Febrero</span><div class="track"><div class="fill" style="width:21.3%"></div></div><span class="mv">36</span></div>
+    <div class="mes"><span class="ml">Marzo</span><div class="track"><div class="fill" style="width:30.8%"></div></div><span class="mv">52</span></div>
+    <div class="mes"><span class="ml">Abril</span><div class="track"><div class="fill" style="width:32.0%"></div></div><span class="mv">54</span></div>
+    <div class="mes"><span class="ml">Mayo</span><div class="track"><div class="fill" style="width:37.9%"></div></div><span class="mv">64</span></div>
+    <div class="mes"><span class="ml">Junio</span><div class="track"><div class="fill" style="width:32.5%"></div></div><span class="mv">55</span></div>
+    <div class="mes"><span class="ml">Julio</span><div class="track"><div class="fill" style="width:28.4%"></div></div><span class="mv">48</span></div>
+    <div class="mes"><span class="ml">Agosto</span><div class="track"><div class="fill low" style="width:14.2%"></div></div><span class="mv">24</span></div>
+    <div class="mes"><span class="ml">Septiembre</span><div class="track"><div class="fill" style="width:26.6%"></div></div><span class="mv">45</span></div>
+    <div class="mes"><span class="ml">Octubre</span><div class="track"><div class="fill" style="width:37.9%"></div></div><span class="mv">64</span></div>
+    <div class="mes"><span class="ml">Noviembre</span><div class="track"><div class="fill" style="width:47.3%"></div></div><span class="mv">80</span></div>
+    <div class="mes"><span class="ml">Diciembre</span><div class="track"><div class="fill slow" style="width:100%"></div></div><span class="mv">169</span></div>
+  </div>
+
+  <p>Diciembre: 169 expedientes y 110 millones. Agosto: 24 expedientes y 7 millones. Quien quiera trabajar con la administración ya sabe cuándo tiene que estar mirando, y no es en verano.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Quién se lo lleva</div>
+  <h2>394 empresas distintas</h2>
+  <p class="lead">De los 751 expedientes, 461 traen ya publicado su adjudicatario: un 61 %. El resto sigue en tramitación o todavía no lo ha publicado.</p>
+
+  <div class="figs">
+    <div class="fig">
+      <div class="num">394</div>
+      <p><strong>empresas distintas</strong> se repartieron esos contratos.<span class="who">Más variedad de la que yo esperaba encontrar.</span></p>
+    </div>
+    <div class="fig">
+      <div class="num gold">46,5<u>%</u></div>
+      <p><strong>del importe adjudicado</strong> se lo llevaron las diez primeras.<span class="who">Concentrado, sí. Pero no es un coto cerrado.</span></p>
+    </div>
+  </div>
+
+  <p>Lo digo tal cual sale, aunque sea menos escandaloso de lo que esperaba: esto no es un reparto entre cuatro. Son casi cuatrocientas empresas, y la mitad del dinero se va por arriba porque los contratos grandes se los llevan quienes pueden con contratos grandes.</p>
+</section>
+
+<section class="kit">
+  <div class="eyebrow op">Si tiene usted una empresa aquí</div>
+  <h2>280 contratos el año pasado estaban a su alcance</h2>
+  <p class="lead">Esa es la lectura que me parece más útil de toda la página, y la que no he visto en ningún sitio.</p>
+
+  <div class="kits">
+    <div class="k hot">
+      <div class="kn">280 contratos<span>de 50.000 € o menos</span></div>
+      <div class="kd">
+        <p>Más de cinco por semana, todo el año. A ese tamaño no compiten las grandes constructoras ni las multinacionales de servicios: compiten empresas como la suya.</p>
+        <p class="q">¿Cuántos de esos vio pasar el año pasado?</p>
+      </div>
+    </div>
+    <div class="k">
+      <div class="kn">Todo es público<span>y gratis</span></div>
+      <div class="kd">
+        <p>Los expedientes se publican en la Plataforma de Contratación del Sector Público. No hay que pagar, ni registrarse, ni conocer a nadie. Están ahí desde 2012.</p>
+        <p class="q">El problema no es el acceso. Es que nadie los baja.</p>
+      </div>
+    </div>
+    <div class="k">
+      <div class="kn">Y diciembre manda<span>agosto, nada</span></div>
+      <div class="kd">
+        <p>Si va a dedicarle atención a esto unas semanas al año, que sean las de noviembre y diciembre: entre los dos meses se convocó un tercio de todos los expedientes del año.</p>
+        <p class="q">Mirar en agosto es mirar cuando no hay nada.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="cierrekit">Esto es exactamente lo que hago con los números de una empresa: coger la serie que ya existe, ordenarla, y sacarle la pregunta que nadie le había hecho. Aquí ha salido que ocho de cada diez euros están en el 10 % de los contratos. En una empresa suele salir que ocho de cada diez problemas están en el 10 % de los procesos.</p>
+</section>
+
+<section class="kit">
+  <div class="eyebrow op">Lo que esta página no dice</div>
+  <h2>Los límites del dato, por delante</h2>
+
+  <div class="kits">
+    <div class="k">
+      <div class="kn">Convocado, no gastado</div>
+      <div class="kd">
+        <p>523,7 millones es lo que se sacó a licitación, no lo que se pagó en 2025. Muchos de los contratos grandes son plurianuales: su importe cubre varios años de servicio.</p>
+      </div>
+    </div>
+    <div class="k">
+      <div class="kn">Faltan los contratos menores</div>
+      <div class="kd">
+        <p>Van por otro canal de publicación que no he incluido todavía. Son los más pequeños de todos, así que el número real de contratos al alcance de una pyme es <em>mayor</em> que los 280 que doy aquí.</p>
+      </div>
+    </div>
+    <div class="k">
+      <div class="kn">De dónde son las empresas</div>
+      <div class="kd">
+        <p>Me habría gustado decir cuántas adjudicatarias son de la comarca y cuántas de fuera. El registro publica el nombre y el NIF, pero no el domicilio, así que no lo puedo calcular sin cruzarlo con otra fuente. No lo invento.</p>
+      </div>
+    </div>
+    <div class="k">
+      <div class="kn">Un año no es una serie</div>
+      <div class="kd">
+        <p>Esto es 2025. Para hablar de tendencias haría falta repetirlo con varios años, y pienso hacerlo.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="cierrekit">Si encuentra un error en cualquiera de estas cifras, dígamelo y lo corrijo aquí mismo con la corrección a la vista.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Comprobarlo usted mismo</div>
+  <h2>Fuente y método</h2>
+  <p>Una sola fuente, y el resto son sumas.</p>
+  <ol class="fuentes">
+    <li>Licitaciones publicadas en los perfiles del contratante, ficheros de sindicación mensuales del ejercicio 2025 — <a href="https://www.hacienda.gob.es/es-ES/GobiernoAbierto/Datos%20Abiertos/Paginas/licitaciones_plataforma_contratacion.aspx">Plataforma de Contratación del Sector Público</a></li>
+  </ol>
+  <p class="src">Método, en corto: se descargan los doce ficheros mensuales de 2025 —unos 1,7 GB en total, con todos los expedientes de España—, se filtran los de los ocho municipios de la comarca y los de sus organismos supramunicipales, se queda una sola versión de cada expediente (el mismo aparece varias veces según avanza su tramitación) y se suma. Los nombres de municipio vienen escritos de muchas formas distintas en el origen, incluida al menos una errata: hay un expediente localizado en «Agleciras». Normalizarlos es la mitad del trabajo.</p>
+  <p class="src">Esta entrada continúa <a href="/campo-de-gibraltar/">Cómo se mueve el Campo de Gibraltar</a>, donde señalé esta fuente como una de las cuatro que responderían al debate y que nadie estaba abriendo.</p>
+</section>
+
+<footer>
+  <div class="sig">
+    <div class="me">Sergio Pelayo<span>Ingeniero informático · Campo de Gibraltar</span></div>
+    <a href="https://pelayoingenieriadigital.es">pelayoingenieriadigital.es</a>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>

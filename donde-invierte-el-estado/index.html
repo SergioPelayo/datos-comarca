@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dónde invierte el Estado</title>
+<meta name="description" content="En 2025 el Estado invirtió 452 € por habitante en Madrid y 187 € en Andalucía. Andalucía tiene el 17,7 % de la población y recibe el 10,5 % de la inversión. Datos de la Intervención General del Estado, con la fuente enlazada.">
+<meta name="author" content="Sergio Pelayo Jimeno">
+<link rel="canonical" href="https://datos.pelayoingenieriadigital.es/donde-invierte-el-estado/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Pelayo Ingeniería Digital">
+<meta property="og:title" content="Dónde invierte el Estado">
+<meta property="og:description" content="En 2025 el Estado invirtió 452 € por habitante en Madrid y 187 € en Andalucía. Andalucía tiene el 17,7 % de la población y recibe el 10,5 % de la inversión. Datos de la Intervención General del Estado, con la fuente enlazada.">
+<meta property="og:url" content="https://datos.pelayoingenieriadigital.es/donde-invierte-el-estado/">
+<meta property="og:image" content="https://datos.pelayoingenieriadigital.es/donde-invierte-el-estado/card-inversion.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="Madrid 452 euros por habitante, Andalucía 187, Cataluña 163. Media española 313.">
+<meta property="article:published_time" content="2026-09-12">
+<meta property="article:author" content="Sergio Pelayo Jimeno">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dónde invierte el Estado">
+<meta name="twitter:description" content="En 2025 el Estado invirtió 452 € por habitante en Madrid y 187 € en Andalucía. Andalucía tiene el 17,7 % de la población y recibe el 10,5 % de la inversión. Datos de la Intervención General del Estado, con la fuente enlazada.">
+<meta name="twitter:image" content="https://datos.pelayoingenieriadigital.es/donde-invierte-el-estado/card-inversion.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%97%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Dónde invierte el Estado","description":"En 2025 el Estado invirtió 452 € por habitante en Madrid y 187 € en Andalucía. Andalucía tiene el 17,7 % de la población y recibe el 10,5 % de la inversión. Datos de la Intervención General del Estado, con la fuente enlazada.",
+"datePublished":"2026-09-12","inLanguage":"es-ES","image":"https://datos.pelayoingenieriadigital.es/donde-invierte-el-estado/card-inversion.png",
+"author":{"@type":"Person","name":"Sergio Pelayo Jimeno","jobTitle":"Ingeniero informático","url":"https://pelayoingenieriadigital.es"},
+"publisher":{"@type":"Organization","name":"Pelayo Ingeniería Digital","url":"https://pelayoingenieriadigital.es"},
+"about":["inversión pública","Andalucía","presupuestos","datos abiertos"]}
+</script>
+<style>
+  :root{
+    --ground:#F1F4F6;
+    --surface:#FFFFFF;
+    --ink:#0F171E;
+    --muted:#5A6B78;
+    --line:#D7E0E6;
+    --line-soft:#E6ECF0;
+    --azul:#0069B4;
+    --azul-soft:rgba(0,105,180,.10);
+    --oro:#8F6412;
+    --oro-soft:rgba(143,100,18,.12);
+    --shadow:0 1px 2px rgba(15,23,30,.06);
+    --maxw:760px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#0A0D11;
+      --surface:#111820;
+      --ink:#EDF2F5;
+      --muted:#8698A5;
+      --line:#1F2A34;
+      --line-soft:#19222B;
+      --azul:#3FADFF;
+      --azul-soft:rgba(63,173,255,.12);
+      --oro:#E0AB3C;
+      --oro-soft:rgba(224,171,60,.13);
+      --shadow:0 1px 2px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0A0D11;
+    --surface:#111820;
+    --ink:#EDF2F5;
+    --muted:#8698A5;
+    --line:#1F2A34;
+    --line-soft:#19222B;
+    --azul:#3FADFF;
+    --azul-soft:rgba(63,173,255,.12);
+    --oro:#E0AB3C;
+    --oro-soft:rgba(224,171,60,.13);
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+    font-size:18px;line-height:1.62;
+    margin:0;padding-block:0 72px;padding-left:20px;padding-right:20px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto}
+
+  h1,h2,h3,.num,.eyebrow,.mono,.tag{font-family:Archivo,"Helvetica Neue",Arial,sans-serif}
+  .mono,.src,.pk,.tag,.eyebrow{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+
+  .eyebrow{
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--azul);font-weight:500;
+  }
+
+  /* ---------- hero ---------- */
+  header{padding-block:64px 44px;border-bottom:2px solid var(--ink)}
+  h1{
+    font-size:clamp(38px,7.4vw,62px);font-weight:800;line-height:1.02;
+    letter-spacing:-.025em;margin:16px 0 0;text-wrap:balance;
+  }
+  .standfirst{font-size:20px;color:var(--muted);margin:20px 0 0;max-width:60ch}
+  .stamp{
+    margin-top:28px;font-size:12.5px;color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+  }
+  .stamp b{color:var(--ink);font-weight:500}
+
+  /* ---------- sections ---------- */
+  section{padding-block:52px;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:none}
+  h2{
+    font-size:clamp(25px,4vw,33px);font-weight:700;letter-spacing:-.02em;
+    line-height:1.14;margin:10px 0 0;text-wrap:balance;
+  }
+  section > p{margin:18px 0 0;max-width:65ch}
+  .lead{font-size:19px}
+
+  /* ---------- figure rows ---------- */
+  .figs{display:grid;gap:0;margin-top:32px}
+  .fig{
+    display:grid;grid-template-columns:minmax(140px,auto) 1fr;
+    gap:10px 28px;align-items:baseline;
+    padding-block:20px;border-top:1px solid var(--line-soft);
+  }
+  .fig:last-child{border-bottom:1px solid var(--line-soft)}
+  .num{
+    font-size:clamp(34px,6vw,46px);font-weight:800;letter-spacing:-.035em;
+    line-height:1;color:var(--azul);font-variant-numeric:tabular-nums;
+  }
+  .num.gold{color:var(--oro)}
+  .num u{text-decoration:none;font-size:.46em;font-weight:600;letter-spacing:0;margin-left:.22em;color:var(--muted)}
+  .fig p{margin:0;font-size:17px;line-height:1.5}
+  .fig .who{display:block;color:var(--muted);font-size:15px;margin-top:4px}
+
+  /* ---------- guess widget ---------- */
+  .guess{
+    margin-top:34px;background:var(--surface);border:1px solid var(--line);
+    box-shadow:var(--shadow);padding:26px 26px 28px;
+  }
+  .guess .q{font-size:19px;margin:0;font-weight:600;font-family:Archivo,sans-serif;letter-spacing:-.01em}
+  .guess .hint{margin:8px 0 0;font-size:15px;color:var(--muted)}
+  .slrow{display:flex;align-items:center;gap:18px;margin-top:22px;flex-wrap:wrap}
+  input[type=range]{flex:1 1 220px;min-width:180px;accent-color:var(--azul);height:26px}
+  .readout{
+    font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:500;
+    font-variant-numeric:tabular-nums;min-width:5.5ch;text-align:right;color:var(--ink);
+  }
+  .guess button{
+    margin-top:20px;font-family:Archivo,sans-serif;font-size:15px;font-weight:700;
+    letter-spacing:.02em;background:var(--ink);color:var(--ground);
+    border:none;padding:11px 20px;cursor:pointer;
+  }
+  .guess button:hover{background:var(--azul);color:#fff}
+  .guess button:focus-visible{outline:3px solid var(--oro);outline-offset:2px}
+  .reveal{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+  .reveal .big{
+    font-family:Archivo,sans-serif;font-size:40px;font-weight:800;
+    letter-spacing:-.035em;color:var(--oro);line-height:1;font-variant-numeric:tabular-nums;
+  }
+  .reveal p{margin:12px 0 0;font-size:17px;max-width:56ch}
+
+  /* ---------- timeline ---------- */
+  .tl{margin-top:34px;border-left:2px solid var(--line);padding-left:0}
+  .ev{position:relative;padding:0 0 26px 30px}
+  .ev:last-child{padding-bottom:0}
+  .ev::before{
+    content:"";position:absolute;left:-6px;top:7px;width:10px;height:10px;
+    background:var(--ground);border:2px solid var(--muted);border-radius:50%;
+  }
+  .ev.mark::before{background:var(--oro);border-color:var(--oro)}
+  .pk{font-size:13px;letter-spacing:.08em;color:var(--muted);display:block}
+  .ev.mark .pk{color:var(--oro)}
+  .ev p{margin:3px 0 0;font-size:17px;line-height:1.5}
+
+  /* ---------- comparison bars ---------- */
+  .bars{margin-top:32px;display:grid;gap:22px}
+  .bar .top{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:16px}
+  .bar .top strong{font-family:Archivo,sans-serif;font-weight:700;font-size:17px}
+  .bar .top span{font-family:"IBM Plex Mono",monospace;font-size:15px;color:var(--muted);white-space:nowrap}
+  .track{margin-top:8px;height:26px;background:var(--line-soft);position:relative;overflow:hidden}
+  .fill{height:100%;background:var(--azul)}
+  .fill.slow{background:var(--oro)}
+  .bar .foot{margin-top:7px;font-size:14.5px;color:var(--muted)}
+
+  /* ---------- pares población / inversión ---------- */
+  .pares{margin-top:32px;display:grid;gap:26px}
+  .par{padding-block:4px}
+  .pn{font-family:Archivo,sans-serif;font-weight:700;font-size:18px;letter-spacing:-.01em;margin-bottom:10px}
+  .pb{display:grid;grid-template-columns:82px 1fr 58px;align-items:center;gap:12px;margin-bottom:6px}
+  .pl{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;
+      text-transform:uppercase;color:var(--muted)}
+  .pv{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--ink);text-align:right;
+      font-variant-numeric:tabular-nums}
+  .pb .track{margin-top:0;height:18px}
+  .fill.pop{background:var(--muted);opacity:.45}
+  .pf{margin-top:9px;font-size:15px;color:var(--muted)}
+  @media (max-width:520px){.pb{grid-template-columns:70px 1fr 52px;gap:8px}}
+
+  /* ---------- money ---------- */
+  .money{margin-top:32px;display:grid;gap:0}
+  .mrow{
+    display:flex;justify-content:space-between;gap:20px;align-items:baseline;
+    padding-block:16px;border-top:1px solid var(--line-soft);
+  }
+  .mrow:last-child{border-bottom:1px solid var(--line-soft)}
+  .mrow .what{font-size:16.5px;max-width:44ch}
+  .mrow .amt{
+    font-family:Archivo,sans-serif;font-weight:800;font-size:24px;letter-spacing:-.03em;
+    color:var(--oro);white-space:nowrap;font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- gap / callout ---------- */
+  .callout{
+    margin-top:32px;background:var(--azul-soft);border-left:4px solid var(--azul);
+    padding:24px 26px;
+  }
+  .callout p{margin:0;font-size:17.5px}
+  .callout p + p{margin-top:14px}
+  .callout code{
+    font-family:"IBM Plex Mono",monospace;font-size:15px;
+    background:var(--surface);padding:2px 6px;border:1px solid var(--line);
+  }
+
+  /* ---------- caja de herramientas ---------- */
+  .kit{
+    margin-top:52px;background:var(--surface);border-top:3px solid var(--oro);
+    border-bottom:1px solid var(--line);padding:38px 32px 40px;
+  }
+  .kit .eyebrow.op{color:var(--oro)}
+  .kit h2{margin-top:12px}
+  .kits{margin-top:32px;display:grid;gap:0}
+  .k{
+    display:grid;grid-template-columns:minmax(170px,210px) 1fr;gap:12px 28px;
+    padding-block:22px;border-top:1px solid var(--line-soft);align-items:start;
+  }
+  .k:last-child{border-bottom:1px solid var(--line-soft)}
+  .kn{
+    font-family:Archivo,sans-serif;font-weight:700;font-size:17px;line-height:1.25;
+    letter-spacing:-.01em;
+  }
+  .kn span{
+    display:block;font-family:"IBM Plex Mono",monospace;font-weight:400;
+    font-size:12.5px;letter-spacing:.03em;color:var(--muted);margin-top:6px;
+  }
+  .k.hot .kn a{color:var(--oro)}
+  .kn a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);
+        padding-bottom:1px}
+  .kn a:hover{border-bottom-color:currentColor}
+  .kn a:focus-visible{outline:2px solid var(--azul);outline-offset:3px}
+  .kd p{margin:0;font-size:16.5px;line-height:1.5}
+  .kd p.q{
+    margin-top:10px;padding-left:16px;border-left:3px solid var(--line);
+    font-style:italic;color:var(--muted);font-size:16px;
+  }
+  .k.hot .kd p.q{border-left-color:var(--oro);color:var(--ink)}
+  .kd p.q em{font-style:normal;color:var(--muted)}
+  .cierrekit{
+    margin-top:32px!important;padding:20px 24px;background:var(--oro-soft);
+    border-left:4px solid var(--oro);font-size:17.5px;
+  }
+
+  /* ---------- sources ---------- */
+  .src{font-size:13px;color:var(--muted);margin-top:26px;line-height:1.75}
+  .src a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+  .src a:hover{color:var(--azul)}
+  ol.fuentes{font-family:"IBM Plex Mono",monospace;font-size:13.5px;line-height:1.85;
+    color:var(--muted);padding-left:22px;margin:24px 0 0}
+  ol.fuentes a{color:var(--azul);text-decoration:none}
+  ol.fuentes a:hover{text-decoration:underline}
+
+  footer{padding-top:46px;border-top:2px solid var(--ink);margin-top:8px}
+  .sig{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .sig .me{font-family:Archivo,sans-serif;font-weight:700;font-size:19px}
+  .sig .me span{display:block;font-weight:400;font-size:15px;color:var(--muted);font-family:"Source Serif 4",serif}
+  .sig a{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--azul);text-decoration:none}
+  .sig a:hover{text-decoration:underline}
+
+  @media (max-width:520px){
+    .fig{grid-template-columns:1fr;gap:6px}
+    .mrow{flex-direction:column;gap:6px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Inversión del Estado · Ejercicio 2025</div>
+  <h1>Dónde invierte el Estado</h1>
+  <p class="standfirst">Un lector me pidió mirar cuánto se ha dejado de invertir en Andalucía. He ido a la fuente oficial y el resultado no es el que yo esperaba: el titular favorece a Andalucía y el reparto real, no.</p>
+  <div class="stamp">
+    <span>Publicado el <b>12 de septiembre de 2026</b></span>
+    <span>·</span>
+    <span>Datos de la <b>Intervención General del Estado</b></span>
+  </div>
+</header>
+
+<section>
+  <div class="eyebrow">El titular</div>
+  <h2>Andalucía es la tercera comunidad que más recibe</h2>
+  <p class="lead">La Intervención General publica cada año cuánta inversión real ha ejecutado el Sector Público Estatal y en qué territorio. Esto es 2025, completo, sin recortar:</p>
+
+  <div class="money">
+    <div class="mrow"><div class="what">Madrid</div><div class="amt">3.217,73 M€</div></div>
+    <div class="mrow"><div class="what">Comunitat Valenciana</div><div class="amt">1.737,78 M€</div></div>
+    <div class="mrow"><div class="what">Andalucía</div><div class="amt">1.619,76 M€</div></div>
+    <div class="mrow"><div class="what">Galicia</div><div class="amt">1.579,77 M€</div></div>
+    <div class="mrow"><div class="what">Cataluña</div><div class="amt">1.321,16 M€</div></div>
+    <div class="mrow"><div class="what">Castilla y León</div><div class="amt">1.221,80 M€</div></div>
+    <div class="mrow"><div class="what">Región de Murcia</div><div class="amt">936,78 M€</div></div>
+    <div class="mrow"><div class="what">Aragón</div><div class="amt">716,60 M€</div></div>
+    <div class="mrow"><div class="what">Castilla-La Mancha</div><div class="amt">676,47 M€</div></div>
+    <div class="mrow"><div class="what">País Vasco</div><div class="amt">492,82 M€</div></div>
+    <div class="mrow"><div class="what">Extremadura</div><div class="amt">444,36 M€</div></div>
+    <div class="mrow"><div class="what">Cantabria</div><div class="amt">299,18 M€</div></div>
+    <div class="mrow"><div class="what">Asturias</div><div class="amt">289,82 M€</div></div>
+    <div class="mrow"><div class="what">Illes Balears</div><div class="amt">255,79 M€</div></div>
+    <div class="mrow"><div class="what">Canarias</div><div class="amt">227,86 M€</div></div>
+    <div class="mrow"><div class="what">Navarra</div><div class="amt">188,49 M€</div></div>
+    <div class="mrow"><div class="what">La Rioja</div><div class="amt">91,70 M€</div></div>
+    <div class="mrow"><div class="what">Ceuta</div><div class="amt">35,60 M€</div></div>
+    <div class="mrow"><div class="what">Melilla</div><div class="amt">15,39 M€</div></div>
+  </div>
+
+  <p class="src">Comprobación que conviene hacer siempre antes de publicar una tabla ajena: estas diecinueve cifras suman 15.368,86 millones, y el total que publica la Intervención es 15.368,8. Cuadra. La tabla es buena.</p>
+</section>
+
+<section>
+  <div class="eyebrow">La corrección</div>
+  <h2>Andalucía tiene el 17,7 % de la población y el 10,5 % de la inversión</h2>
+  <p class="lead">Un tercer puesto suena bien hasta que recuerdas que Andalucía es la comunidad más poblada de España. Comparando cada territorio consigo mismo — lo que pesa en población frente a lo que recibe en inversión — la tabla se lee al revés.</p>
+
+  <div class="pares">
+    <div class="par">
+      <div class="pn">Madrid</div>
+      <div class="pb"><span class="pl">Población</span><div class="track"><div class="fill pop" style="width:65.9%"></div></div><span class="pv">14,5 %</span></div>
+      <div class="pb"><span class="pl">Inversión</span><div class="track"><div class="fill" style="width:95.0%"></div></div><span class="pv">20,9 %</span></div>
+      <div class="pf">Recibe <strong>1,4 veces</strong> su peso de población.</div>
+    </div>
+    <div class="par">
+      <div class="pn">Andalucía</div>
+      <div class="pb"><span class="pl">Población</span><div class="track"><div class="fill pop" style="width:80.5%"></div></div><span class="pv">17,7 %</span></div>
+      <div class="pb"><span class="pl">Inversión</span><div class="track"><div class="fill slow" style="width:47.7%"></div></div><span class="pv">10,5 %</span></div>
+      <div class="pf">Recibe <strong>0,6 veces</strong> su peso de población.</div>
+    </div>
+    <div class="par">
+      <div class="pn">Cataluña</div>
+      <div class="pb"><span class="pl">Población</span><div class="track"><div class="fill pop" style="width:75.0%"></div></div><span class="pv">16,5 %</span></div>
+      <div class="pb"><span class="pl">Inversión</span><div class="track"><div class="fill slow" style="width:39.1%"></div></div><span class="pv">8,6 %</span></div>
+      <div class="pf">Recibe <strong>0,5 veces</strong> su peso de población. Está por debajo de Andalucía.</div>
+    </div>
+  </div>
+
+  <p class="src">Las dos barras de cada comunidad están a la misma escala, así que se pueden comparar entre sí y con las de las demás.</p>
+
+  <p>Esa última línea es la que a mí me parece más importante de toda la página, y es la que me hace fiarme del dato: si esto fuera una cuestión de colores políticos, Cataluña y Andalucía no estarían en el mismo lado de la tabla. Están.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Por habitante</div>
+  <h2>452 € en Madrid, 187 € en Andalucía</h2>
+  <p class="lead">La misma idea, en euros por persona. La media española de inversión territorializada en 2025 fue de 313 €.</p>
+
+  <div class="figs">
+    <div class="fig">
+      <div class="num">452<u>€/hab</u></div>
+      <p><strong>Madrid.</strong><span class="who">Un 44 % por encima de la media española.</span></p>
+    </div>
+    <div class="fig">
+      <div class="num gold">187<u>€/hab</u></div>
+      <p><strong>Andalucía.</strong><span class="who">Un 40 % por debajo de la media.</span></p>
+    </div>
+    <div class="fig">
+      <div class="num gold">163<u>€/hab</u></div>
+      <p><strong>Cataluña.</strong><span class="who">Un 48 % por debajo de la media.</span></p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>Un madrileño recibió en 2025 <strong>2,4 veces</strong> más inversión del Estado que un andaluz. No es una estimación: son los 3.217,73 millones de la Intervención divididos entre los 7.125.583 habitantes que cuenta el INE, frente a los 1.619,76 millones divididos entre 8.663.175.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">El agujero</div>
+  <h2>Cuatro de cada diez euros no van a ningún territorio</h2>
+  <p class="lead">La inversión real del Sector Público Estatal en 2025 fue de 25.764 millones. De esos, solo 15.369 se asignan a una comunidad concreta.</p>
+
+  <div class="money">
+    <div class="mrow"><div class="what">Inversión real total del Sector Público Estatal</div><div class="amt">25.764 M€</div></div>
+    <div class="mrow"><div class="what">Asignada a un territorio concreto</div><div class="amt">15.369 M€</div></div>
+    <div class="mrow"><div class="what">Sin territorio asignado — servicios centrales, gasto en el exterior y no regionalizable</div><div class="amt">10.395 M€</div></div>
+  </div>
+
+  <p>Son <strong>el 40,3 %</strong> del total. No digo que sea dinero perdido: los servicios centrales existen y hay gasto que de verdad no se puede asignar a una provincia. Digo que cuatro de cada diez euros de inversión del Estado quedan fuera de cualquier discusión sobre reparto territorial, y que eso rara vez sale en el debate.</p>
+</section>
+
+<section class="kit">
+  <div class="eyebrow op">Lo que esta página no dice</div>
+  <h2>Los límites del dato, por delante</h2>
+  <p class="lead">Una cifra sin sus límites al lado sirve para discutir, no para decidir. Estos son los de esta página, y los pongo yo antes de que me los ponga nadie.</p>
+
+  <div class="kits">
+    <div class="k">
+      <div class="kn">Un año no es una tendencia</div>
+      <div class="kd">
+        <p>La inversión va a golpes: una sola obra grande mueve la tabla entera de un ejercicio. Para hablar de trato sistemático a un territorio hace falta la serie de varios años, no 2025 suelto.</p>
+      </div>
+    </div>
+    <div class="k">
+      <div class="kn">Inversión real no es todo el dinero</div>
+      <div class="kd">
+        <p>Esto es inversión real: obra y bienes. No incluye las transferencias de capital ni el gasto corriente, que también llegan a los territorios por otras vías. Es una parte del cuadro, no el cuadro.</p>
+      </div>
+    </div>
+    <div class="k">
+      <div class="kn">Ejecutado, no presupuestado</div>
+      <div class="kd">
+        <p>Estas cifras son lo que se gastó de verdad, no lo que se prometió. Sería muy interesante comparar ambas, pero 2025 y 2026 van con presupuestos prorrogados, así que esa comparación no es limpia este año.</p>
+      </div>
+    </div>
+    <div class="k hot">
+      <div class="kn">Falta el detalle provincial</div>
+      <div class="kd">
+        <p>La Intervención publica también el desglose por provincias, que es el que de verdad contestaría qué le toca al Campo de Gibraltar. No he podido descargarlo todavía. Cuando lo tenga, esta página se amplía.</p>
+      </div>
+    </div>
+    <div class="k">
+      <div class="kn">Y lo que no voy a poner</div>
+      <div class="kd">
+        <p>Me pidieron comparar esto con cuánto ha robado cada cual. No lo hago: eso no es un dato descargable, son causas judiciales, y mezclarlo con cifras verificadas destruiría lo único que hace útil esta página.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="cierrekit">Si encuentra un error en cualquiera de estas cifras, dígamelo y lo corrijo aquí mismo, con la corrección a la vista.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Comprobarlo usted mismo</div>
+  <h2>Fuentes</h2>
+  <p>Las dos únicas que hacen falta. Todo lo demás de esta página son divisiones.</p>
+  <ol class="fuentes">
+    <li>Distribución territorial de la inversión del Sector Público Estatal, 2025 — <a href="https://www.igae.pap.hacienda.gob.es/sitios/igae/es-ES/Contabilidad/ContabilidadPublica/CPE/EjecucionPresupuestaria/paginas/isdistribucioninversion.aspx">Intervención General de la Administración del Estado</a></li>
+    <li>Reparto por comunidades del ejercicio 2025 — <a href="https://electomania.es/madrid-c-valenciana-andalucia-y-galicia-fueron-las-ccaa-con-una-mayor-inversion-ejecutada-por-el-estado-en-2025/">Electomanía</a> y <a href="https://www.infobae.com/espana/agencias/2026/07/17/madrid-encabeza-las-inversiones-reales-del-estado-en-2025-con-un-21/">Infobae</a>, ambos sobre los datos de la Intervención</li>
+    <li>Población a 1 de enero de 2025: 49.077.984 en España, 8.663.175 en Andalucía, 8.119.550 en Cataluña, 7.125.583 en Madrid — <a href="https://www.ine.es/dyngs/Prensa/ECP4T24.htm">INE, Estadística Continua de Población</a></li>
+    <li>Presupuestos prorrogados para 2026 — <a href="https://www.sepg.pap.hacienda.gob.es/sitios/sepg/es-ES/Presupuestos/PGE/PGE2025Prorroga/Paginas/PGE2025Prorroga.aspx">Secretaría de Estado de Presupuestos y Gastos</a></li>
+  </ol>
+  <p class="src">Esta entrada nace de un comentario de un lector en la anterior, <a href="/campo-de-gibraltar/">Cómo se mueve el Campo de Gibraltar</a>. Si usted quiere que mire algún dato público, dígamelo y lo miro.</p>
+</section>
+
+<footer>
+  <div class="sig">
+    <div class="me">Sergio Pelayo<span>Ingeniero informático · Campo de Gibraltar</span></div>
+    <a href="https://pelayoingenieriadigital.es">pelayoingenieriadigital.es</a>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>
